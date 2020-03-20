@@ -1,5 +1,5 @@
 {
-  "name": "wirvsvirus",
+  "name": "node-ts-swagger-boilerplate",
   "version": "0.1.0",
   "description": "",
   "main": "app.ts",
@@ -19,7 +19,7 @@
     "express"
   ],
   "author": "Sven Patrick Meier<sven.patrick.meier@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.3",
