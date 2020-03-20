@@ -1,0 +1,105 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"ICityResponse": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"city": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"message",
+					"city"
+				],
+				"type": "object",
+				"additionalProperties": true
+			},
+			"ITestMessage": {
+				"properties": {
+					"message": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": true
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "wirvsvirus",
+		"version": "0.1.0",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/city/{cityId}": {
+			"get": {
+				"operationId": "GetCity",
+				"responses": {
+					"200": {
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ICityResponse"
+								}
+							}
+						},
+						"description": "Ok"
+					}
+				},
+				"tags": [
+					"City"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "cityId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/": {
+			"get": {
+				"operationId": "GetIndex",
+				"responses": {
+					"200": {
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ITestMessage"
+								}
+							}
+						},
+						"description": "Ok"
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "https://localhost:1337/api/v1"
+		}
+	]
+}

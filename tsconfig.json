@@ -1,0 +1,6 @@
+{
+    "extends": "./node_modules/parallax-common-config/tsconfig",
+    "compilerOptions": {
+        "experimentalDecorators": true,
+    }
+}
