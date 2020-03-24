@@ -17,7 +17,8 @@ Now everything is set to start developing.
 First you need to create your `controllers` and `models`. For that you can follow the
 documentation of [`tsoa`](https://github.com/lukeautry/tsoa#create-controllers).
 
-After you created (at least) you can try out if everything works by doing:
+After you created (at least) you can try out if everything works by doing.
+This Boilerplate provides an example Controller and Model so you can simply start after the following steps.
 
 ```console
 # only generate
