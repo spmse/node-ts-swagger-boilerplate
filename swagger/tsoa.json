@@ -6,7 +6,7 @@
 		"specVersion": 3,
 		"outputDirectory": "./swagger",
 		"controllerPathGlobs": [
-			"../src/controller/**/*.ts"
+			"./src/controller/**/*.ts"
 		]
 	},
 	"routes": {

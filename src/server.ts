@@ -1,10 +1,10 @@
+import * as controllers from "./controller";
 import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import { RegisterRoutes } from "./routes/routes";
-import * as controllers from "./controller"
-const swaggerDocument = require("../swagger.json");
+const swaggerDocument = require("../swagger/swagger.json");
 /**
  * The server.
  *
