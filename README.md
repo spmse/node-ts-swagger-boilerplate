@@ -6,13 +6,11 @@ Boilerplate project for a `nodejs-typescript` server with basic `jest` test conf
 
 This boilerplate was generated on `macOS` which internally uses the BSD `sed` implementation. To use the GNU `sed` implementation you can install `gsed` via `brew`. This is what was used in the `start:devLocal` script.
 
-When using this boilerplate on Ubuntu you can simply adjust `package.json`s script to the following:
+When using this boilerplate on Ubuntu you can simply adjust `package.json`s `script` section to the following:
 
 ```json
 {
-    "scripts": {
-        "start:devLocal": "yarn run api:gen && sed -i 's/https:/http:/' ./swagger/swagger.json && yarn run ts-node src/app.ts",
-    }
+    "start:devLocal": "yarn run api:gen && sed -i 's/https:/http:/' ./swagger/swagger.json && yarn run ts-node src/app.ts",
 }
 ```
 
