@@ -2,6 +2,22 @@
 
 Boilerplate project for a `nodejs-typescript` server with basic `jest` test configuration and `swagger-ui` documentation and code generation.
 
+## Disclaimer
+
+This boilerplate was generated on `macOS` which internally uses the BSD `sed` implementation. To use the GNU `sed` implementation you can install `gsed` via `brew`. This is what was used in the `start:devLocal` script.
+
+When using this boilerplate on Ubuntu you can simply adjust `package.json`s script to the following:
+
+```json
+{
+    "scripts": {
+        "start:devLocal": "yarn run api:gen && sed -i 's/https:/http:/' ./swagger/swagger.json && yarn run ts-node src/app.ts",
+    }
+}
+```
+
+So no further magic than removing the `g` from `sed` command is required in order to get this working on an other OS than `macOS`.
+
 ## Installation
 
 To use the boilerplate follow this steps:

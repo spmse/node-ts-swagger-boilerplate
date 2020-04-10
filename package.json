@@ -1,12 +1,12 @@
 {
   "name": "node-ts-swagger-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "app.ts",
   "scripts": {
     "api:gen": "yarn run tsoa -c swagger/tsoa.json swagger-and-routes",
     "prestart": "yarn run api:gen",
-    "start:devLocal": "yarn run api:gen && yarn run ts-node src/app.ts",
+    "start:devLocal": "yarn run api:gen && gsed -i 's/https:/http:/' ./swagger/swagger.json && yarn run ts-node src/app.ts",
     "start:local": "yarn run ts-node src/app.ts",
     "test": "jest --config ./jest.config.js"
   },
@@ -26,7 +26,6 @@
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.2",
     "@types/swagger-ui-express": "^4.1.1",
-    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -37,5 +36,8 @@
     "ts-node": "^8.7.0",
     "tsoa": "^2.5.13",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }

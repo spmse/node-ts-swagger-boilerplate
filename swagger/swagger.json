@@ -6,7 +6,7 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {
-			"ITestMessage": {
+			"IMessage": {
 				"properties": {
 					"message": {
 						"type": "string"
@@ -38,7 +38,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/ITestMessage"
+									"$ref": "#/components/schemas/IMessage"
 								}
 							}
 						},
@@ -52,7 +52,7 @@
 	},
 	"servers": [
 		{
-			"url": "https://localhost:1337/api/v1"
+			"url": "http://localhost:1337/api/v1"
 		}
 	]
 }
