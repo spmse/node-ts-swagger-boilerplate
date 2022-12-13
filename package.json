@@ -28,7 +28,7 @@
     "@types/swagger-ui-express": "^4.1.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest": "^25.1.0",
     "parallax-common-config": "^0.1.5",
     "swagger-ui-express": "^4.1.3",
